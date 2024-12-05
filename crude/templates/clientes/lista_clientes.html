@@ -1,0 +1,11 @@
+<h1>Lista de Clientes</h1>
+<a href="nuevo/">Agregar Cliente</a>
+<ul>
+    {% for c in clientes %}
+        <li>
+            {{ c.nombre }} - {{ c.direccion }} - {{ c.telefono }}
+            <a href="{{ c.id }}/editar/">Editar</a>
+            <a href="{{ c.id }}/eliminar/">Eliminar</a>
+        </li>
+    {% endfor %}
+</ul>
